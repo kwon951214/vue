@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>좋아요</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+</head>
+<body>
+<div id="root">
+    <div> {{first}} 곱하기 {{second}} 는?</div>
+    <form v-on:submit.prevent="onSubmit">
+        <input type="number" v-model="value">
+        <button type="submit">입력</button>
+    </form>
+    <div id="result">{{result}}</div>
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#root',
+        data: {
+            first: Math.ceil(Math.random() * 9),
+            second: Math.ceil(Math.random() * 9),
+            value: '',
+            result: ''
+        },
+        methods: {
+            onSubmit(e) {
+                e.preventDefault();
+                console.log(this);
+                console.log(this.first, this.second, this.value);
+                if (this.first * this.second === parseInt(this.value)) {
+                    this.result = "똑똑하군";
+                } else {
+                    this.result = "너 뭐야!"
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
