@@ -15,7 +15,7 @@ module.exports = {
         new VueLoaderPlugin(),
     ],
     output: {
-        filename: 'app.js', //[name].js 해줘도 됨
+        filename: 'app.js', //[name].js 해줘도 됨 //package.json에는 파일 이름만 쓰기!!
         path: path.join(__dirname, 'dist'),
     }
 };
