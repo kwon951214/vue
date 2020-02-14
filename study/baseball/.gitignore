@@ -22,5 +22,5 @@ yarn-error.log*
 *.sln
 *.sw?
 /study/baseball/node_modules/
-/study/baseball/package.json
 /study/baseball/package-lock.json
+/study/baseball/package.json
